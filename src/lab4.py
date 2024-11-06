@@ -7,29 +7,39 @@ class Benzopyla:
         self.public_numeric = public_numeric
         self.public_string = public_string
 
-    def get_nazva(self):
-        return self.nazva
+    def nazva(self):
+        return self.__nazva
 
-    def set_nazva(self, nazva):
-        self.nazva = nazva
+    @nazva.setter
+    def nazva(self, value):
+        self.__nazva = value
 
-    def get_potuzhnist_vat(self):
+    @property
+    def potuzhnist_vat(self):
         return self.__potuzhnist_vat
 
-    def set_potuzhnist_vat(self, potuzhnist_vat):
-        self.__potuzhnist_vat = potuzhnist_vat
+    @potuzhnist_vat.setter
+    def potuzhnist_vat(self, value):
+        self.__potuzhnist_vat = value
 
-    def get_kilkist_obertiv(self):
+    @property
+    def kilkist_obertiv(self):
         return self.__kilkist_obertiv
 
-    def set_kilkist_obertiv(self, kilkist_obertiv):
-        self.__kilkist_obertiv = kilkist_obertiv
+    @kilkist_obertiv.setter
+    def kilkist_obertiv(self, value):
+        self.__kilkist_obertiv = value
 
+    @property
+    def work_hours(self):
+        return self.__work_hours
+
+    @work_hours.setter
+    def work_hours(self, value):
+        self.__work_hours = value
+        
     def add_work_hours(self, hours):
         self.work_hours += hours
-
-    def get_work_hours(self):
-        return self.work_hours
 
     def __str__(self):
         return f"Benzopyla(nazva={self.nazva}, potuzhnist={self.__potuzhnist_vat} W, kilkist_obertiv={self.__kilkist_obertiv} RPM, " \
