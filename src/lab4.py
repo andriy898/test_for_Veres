@@ -71,10 +71,12 @@ def main():
     benzopyly = [benzopyla1, benzopyla2, benzopyla3]
 
     max_work_hours_benzopyla = benzopyly[0]
+
     for benzopyla in benzopyly:
-        if benzopyla.get_work_hours() > max_work_hours_benzopyla.get_work_hours():
+        if benzopyla.work_hours > max_work_hours_benzopyla.work_hours:
             max_work_hours_benzopyla = benzopyla
-        print(f"Бензопила з найбільшою кількістю робочих годин: {max_work_hours_benzopyla.get_nazva()} з {max_work_hours_benzopyla.get_work_hours()} годинами.")
+
+    print(f"Бензопила з найбільшою кількістю робочих годин: {max_work_hours_benzopyla.nazva} з {max_work_hours_benzopyla.work_hours} годинами.")
 
 
 if __name__ == "__main__":
