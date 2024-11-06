@@ -7,6 +7,7 @@ class Benzopyla:
         self.public_numeric = public_numeric
         self.public_string = public_string
 
+    @property
     def nazva(self):
         return self.__nazva
 
@@ -63,11 +64,6 @@ def main():
     print(benzopyla2)
     print(benzopyla3)
 
-    
-    max_power = benzopyla1.get_potuzhnist_vat()
-    max_rpm = benzopyla1.get_kilkist_obertiv()
-    max_benzopyla = benzopyla1
-
     benzopyly = [benzopyla1, benzopyla2, benzopyla3]
 
     max_work_hours_benzopyla = benzopyly[0]
@@ -75,7 +71,6 @@ def main():
     for benzopyla in benzopyly:
         if benzopyla.work_hours > max_work_hours_benzopyla.work_hours:
             max_work_hours_benzopyla = benzopyla
-
     print(f"Бензопила з найбільшою кількістю робочих годин: {max_work_hours_benzopyla.nazva} з {max_work_hours_benzopyla.work_hours} годинами.")
 
 
